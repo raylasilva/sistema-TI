@@ -1,0 +1,149 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: blue;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  overflow-y: hidden;
+}
+
+.cabecalho {
+  background-color: rgb(255, 231, 45);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo img {
+  margin-right: auto;
+  max-width: 7rem;
+  height: auto;
+}
+
+.titulo {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.cabecalhoMenu {
+  display: flex;
+}
+
+.cabecalhoMenu a {
+  color: rgb(83, 181, 181);
+  text-decoration: none;
+  margin: 0 1rem;
+  border: 0.1rem solid white;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+}
+
+.cabecalhoMenu a:hover {
+  background-color: white;
+  color: rgb(83, 181, 181);
+}
+
+.cabecalho h1 {
+  margin: 0;
+  color: rgb(83, 181, 181);
+  -webkit-text-stroke: 0.5px black;
+  text-stroke: 0.5px black;
+}
+
+/* Estilo para a seção principal */
+section.home {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+
+    height: 100vh; /* Altura da seção igual à altura da viewport */
+    background-color: #f0f0f0; /* Cor de fundo (opcional) */
+}
+
+/* Estilo para o contêiner interno */
+div.container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    max-width: 800px; /* Largura máxima do contêiner */
+    padding: 20px;
+}
+
+/* Estilo para a imagem */
+.img {
+    max-width: 60%; /* Largura máxima da imagem */
+    height: auto; /* Altura automática */
+    margin-right: 20px; /* Margem à direita para separar da seção de formulário */
+}
+
+/* Estilo para o formulário */
+form.form {
+    max-width: 50%; /* Largura máxima do formulário */
+}
+
+/* Estilo para as etiquetas e entradas do formulário */
+form.form label {
+    display: block; /* Exibe em uma linha separada */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    color: rgb(255, 231, 45);
+   font-size:24px;
+}
+
+form.form input[type="email"],
+form.form input[type="password"] {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Cantos arredondados */
+}
+
+form.form button {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #007bff; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto branco */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de ponteiro ao passar por cima */
+}
+
+/* Estilo para o botão ao passar por cima */
+form.form button:hover {
+    background-color: #0056b3; /* Cor de fundo azul mais escura */
+}
+
+.footer {
+  background-color: rgb(255, 231, 45);
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-img {
+  max-width: 50px;
+  height: auto;
+}
+
+.footer a {
+   text-decoration: none;
+  margin-right: 10px;
+  color: rgb(83, 181, 181);
+}
+
+.footer a:hover {
+  color: #fff;
+}
+

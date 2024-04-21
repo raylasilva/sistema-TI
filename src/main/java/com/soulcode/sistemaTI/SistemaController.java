@@ -10,4 +10,14 @@ public class SistemaController {
     public String SistemaTI(){
         return "index.html";
     }
+   @GetMapping("/login-usuario")
+   public String LoginUsuario(){
+        return "login-usuario";
+   }
+    @GetMapping("/login-tecnico")
+    public String LoginTecnico(){
+        return "login-tecnico";
+    }
+
+
 }

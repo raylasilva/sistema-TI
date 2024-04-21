@@ -6,12 +6,12 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/style-login-usuario.css"/>
     <link
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
             rel="stylesheet"
     />
-    <title>Sistema de Chamados Técnicos em Informática</title>
+    <title>Login Técnico</title>
     <!--<img src="images/persona.jpg" alt="mulher no computador">-->
 </head>
 <body>
@@ -23,33 +23,20 @@
         <h1>Suporte ElasTech</h1>
     </div>
     <nav class="cabecalhoMenu">
-        <a href="login-usuario">Entrar como Usuário</a>
-        <a href="login-tecnico">Entrar como Técnico</a>
+        <a href="index.html">Voltar</a>
     </nav>
 </header>
 
 <section class="home">
     <div class="container">
-        <div class="texto">
-            <h1>Sistema de Chamados Técnicos em Informática</h1>
-            <p>
-                Aqui, sete mulheres talentosas se uniram para fornecer o suporte
-                técnico que você precisa, com eficiência e excelência.
-                <br />
-                Em nosso projeto, desenvolvemos uma interface intuitiva e rotas
-                simplificadas para garantir que seus chamados técnicos sejam
-                atendidos de forma rápida e eficaz.
-            </p>
-            <br />
-            <p>
-                Estamos aqui para tornar sua experiência com suporte técnico mais
-                fácil e eficiente. Conte conosco para resolver qualquer desafio
-                técnico que você possa enfrentar.
-            </p>
-        </div>
-        <div class="imagem">
-            <img src="images/persona.jpg" class="img" />
-        </div>
+        <img src="images/persona2.png" class="img" />
+        <form class="form">
+            <label>Email</label> <br>
+            <input type="email" id="email" name="email">  <br>
+            <label>Senha</label><br>
+            <input type="password" id="senha" name="senha"> <br>
+            <button>Entrar</button>
+        </form>
     </div>
 </section>
 
