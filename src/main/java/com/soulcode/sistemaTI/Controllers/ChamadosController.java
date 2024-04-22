@@ -27,9 +27,9 @@ public class ChamadosController {
         return "novo-chamado";
     }
 
-    @PostMapping("/criar-chamado")
-    public String criarNovoChamado(ChamadosModel chamado) {
-        chamados.add(chamado);
-        return "redirect:/chamados-usuario?name=" + chamado.getUsuario();
-    }
+//    @PostMapping("/criar-chamado")
+//    public String criarNovoChamado(ChamadosModel chamado) {
+//        chamados.add(chamado);
+//        return "redirect:/chamados-usuario?name=" + chamado.getUsuario();
+//    }
 }
