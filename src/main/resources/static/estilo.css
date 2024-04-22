@@ -3,30 +3,36 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background: rgb(251, 199, 1);
   color: white;
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
 }
+
 .cabecalho {
   background-color: rgb(255, 231, 45);
   display: flex;
   align-items: center;
   padding: 1rem;
 }
+
 .logo img {
   margin-right: auto;
   max-width: 7rem;
   height: auto;
 }
+
 .titulo {
   flex-grow: 1;
   text-align: center;
 }
+
 .cabecalhoMenu {
   display: flex;
 }
+
 .cabecalhoMenu a {
   color: rgb(83, 181, 181);
   text-decoration: none;
@@ -35,67 +41,87 @@ body {
   padding: 0.6rem;
   border-radius: 0.4rem;
 }
+
 .cabecalhoMenu a:hover {
   background-color: white;
   color: rgb(83, 181, 181);
 }
+
 .cabecalho h1 {
   margin: 0;
   color: rgb(83, 181, 181);
   -webkit-text-stroke: 0.5px black;
   text-stroke: 0.5px black;
 }
+
 .home .container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 1rem 3rem 3rem 0;
+  margin: 1rem 0 0 1rem;
 }
+
+.home .texto {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.home .texto h1 {
+  font-size: 50px;
+  margin-bottom: 80px;
+}
+
 .home .texto p {
   flex-grow: 1;
-  margin-left:8px;
+  margin-left: 8px;
   text-align: left;
   font-size: 1.4rem;
   font-weight: 400;
-  padding:0 70px;
-  color: #FFFFFF;
+  padding: 0 20px;
+  color: #fff;
 }
 .home .texto h1 {
-  font-size: 48px;
+  font-size: 2rem;
   white-space: nowrap;
-  margin-bottom: 40px;
-  margin-left:10px;
-  padding: 20px 50px;
-  color:rgb(83, 181, 181);
+  margin-bottom: 60px;
+  text-align: center;
+  padding: 20px 0;
+  color: rgb(83, 181, 181);
 }
-.home .imagem {
-  margin-left: 20px;
-}
-.home .imagem img {
+
+.img {
   max-width: 30rem;
   height: auto;
+  margin-right: auto;
 }
+
 .footer {
   background-color: rgb(255, 231, 45);
   padding: 1rem;
   position: fixed;
   bottom: 0;
   width: 100%;
+  height:auto;
 }
+
 .footer-content {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .github-img {
-  max-width: 50px;
+  max-width: 3rem;
   height: auto;
 }
+
 .footer a {
-   text-decoration: none;
-  margin-right: 10px;
   color: rgb(83, 181, 181);
+  text-decoration: none;
+  margin-right: 10px;
 }
+
 .footer a:hover {
   color: #fff;
 }
