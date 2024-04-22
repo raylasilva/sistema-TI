@@ -1,18 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8" />
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" type="text/css" href="/Styles/style-login-usuario.css"/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet"
-    />
-    <title>Login Usuário</title>
-    <link rel="icon" href="images/persona.jpg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamados</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/style-chamados.css"/>
 </head>
 <body>
 <header class="cabecalho">
@@ -23,23 +15,36 @@
         <h1>Suporte ElasTech</h1>
     </div>
     <nav class="cabecalhoMenu">
+        <a href="novo-chamado">Novo chamado</a>
         <a href="index.html">Voltar</a>
     </nav>
 </header>
-
+<div class="texto">
+    <h1> Chamados de <span th:text="${name}"></span></h1>
+</div>
 <section class="home">
     <div class="container">
-        <img src="images/persona3.png" class="img" />
-    <form class="form" method="post" action="/login-usuario">
-        <h3>Entrar como Usuário</h3>
-        <label>Nome Completo</label> <br>
-        <input type="text" id="name" name="name">  <br>
-        <label>Email</label> <br>
-        <input type="email" id="email" name="email">  <br>
-        <label>Senha</label><br>
-        <input type="password" id="senha" name="senha"> <br>
-      <button>Entrar</button>
-    </form>
+        <table>
+            <thead class="titulo-tabela">
+            <tr>
+                <th>Usuário</th>
+                <th>Setor</th>
+                <th>Descrição</th>
+                <th>Prioridade</th>
+                <th>Data de Início</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="chamado : ${chamados}">
+                <td th:text="${chamado.usuario}">Usuário</td>
+                <td th:text="${chamado.setor}">Setor</td>
+                <td th:text="${chamado.descricao}">Descrição</td>
+                <td th:text="${chamado.prioridade}">Prioridade</td>
+                <td th:text="${chamado.dataInicio}">Data de Início</td>
+            </tr>
+            </tbody>
+        </table>
+
     </div>
 </section>
 

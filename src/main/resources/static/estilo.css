@@ -58,41 +58,35 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 1rem 0 0 1rem;
 }
 
 .home .texto {
   flex-grow: 1;
   text-align: center;
-  font-size: 1.1rem;
 }
 
 .home .texto h1 {
-  font-size: 50px;
-  margin-bottom: 80px;
+  font-size: 2rem;
+  white-space: nowrap;
+  margin-bottom: 50px;
+  padding: 5px 0;
+  color: rgb(83, 181, 181);
 }
 
 .home .texto p {
   flex-grow: 1;
   margin-left: 8px;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 400;
   padding: 0 20px;
   color: #fff;
 }
-.home .texto h1 {
-  font-size: 2rem;
-  white-space: nowrap;
-  margin-bottom: 60px;
-  text-align: center;
-  padding: 20px 0;
-  color: rgb(83, 181, 181);
-}
+
 
 .img {
-  max-width: 30rem;
-  height: auto;
+  max-width: 33rem;
+  height: 37rem;
   margin-right: auto;
 }
 
