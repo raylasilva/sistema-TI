@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8" />
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" type="text/css" href="/Styles/style-login-usuario.css"/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet"
-    />
-    <title>Login Técnico</title>
-    <link rel="icon" href="images/persona.jpg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamados</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/style-chamados.css"/>
 </head>
 <body>
 <header class="cabecalho">
@@ -23,20 +15,28 @@
         <h1>Suporte ElasTech</h1>
     </div>
     <nav class="cabecalhoMenu">
-        <a href="index.html">Voltar</a>
+        <a href="login-tecnico">Entrar como Usuário</a>
+        <a href="login-usuario">Entrar como Técnico</a>
     </nav>
 </header>
 
 <section class="home">
     <div class="container">
-        <img src="images/persona2.png" class="img" />
-        <form class="form">
-            <h3>Entrar como Técnico</h3>
-            <label>Email</label> <br>
-            <input type="email" id="email" name="email">  <br>
-            <label>Senha</label><br>
-            <input type="password" id="senha" name="senha"> <br>
-            <button>Entrar</button>
+        <h1>Criar Novo Chamado</h1>
+        <form method="post" action="/criar-chamado">
+            <label for="usuario">Usuário:</label><br>
+            <input type="text" id="usuario" name="usuario" required><br>
+            <label for="setor">Setor:</label><br>
+            <input type="text" id="setor" name="setor" required><br>
+            <label for="descricao">Descrição:</label><br>
+            <textarea id="descricao" name="descricao" required></textarea><br>
+            <label for="prioridade">Prioridade:</label><br>
+            <select id="prioridade" name="prioridade" required>
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+            </select><br>
+            <button type="submit">Criar Chamado</button>
         </form>
     </div>
 </section>
