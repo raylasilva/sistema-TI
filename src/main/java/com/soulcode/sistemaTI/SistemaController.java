@@ -4,6 +4,8 @@ import com.soulcode.sistemaTI.Models.ChamadosModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
@@ -13,8 +15,8 @@ import java.util.List;
 @Controller
 public class SistemaController {
 
-    @GetMapping("/chamados-sistema")
-    public String listaChamados(Model model, String name){
+    @RequestMapping(value = "/chamados-sistema", method = RequestMethod.GET)
+    public String listaChamados(Model model, @RequestParam String name){
         List<ChamadosModel> chamados = new ArrayList<>();
 
         // Simulando alguns chamados

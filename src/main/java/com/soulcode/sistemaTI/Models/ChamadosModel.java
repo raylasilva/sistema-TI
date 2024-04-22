@@ -12,29 +12,48 @@ import java.util.Date;
 public class ChamadosModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String usuario;
+    private long idtecnico;
+
+    private String nome;
     private String setor;
     private String descricao;
+
     private String prioridade;
     private LocalDate dataInicio;
 
     public ChamadosModel() {
     }
 
-    public ChamadosModel(String usuario, String setor, String descricao, String prioridade, LocalDate dataInicio) {
-        this.usuario = usuario;
+    public ChamadosModel(String nome, String setor, String descricao, String prioridade, LocalDate dataInicio) {
         this.setor = setor;
         this.descricao = descricao;
         this.prioridade = prioridade;
         this.dataInicio = dataInicio;
+        this.nome = nome;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public long getIdtecnico() {
+        return idtecnico;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setIdtecnico(long idtecnico) {
+        this.idtecnico = idtecnico;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public long getIdTecnico() {
+        return idtecnico;
+    }
+
+    public void setIdTecnico(long idtecnico) {
+        this.idtecnico = idtecnico;
     }
 
     public String getSetor() {
