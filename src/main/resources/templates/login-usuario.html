@@ -12,7 +12,7 @@
             rel="stylesheet"
     />
     <title>Login Usuário</title>
-    <!--<img src="images/persona.jpg" alt="mulher no computador">-->
+    <link rel="icon" href="images/persona.jpg" />
 </head>
 <body>
 <header class="cabecalho">
@@ -30,13 +30,15 @@
 <section class="home">
     <div class="container">
         <img src="images/persona3.png" class="img" />
-    <form class="form">
+    <form class="form" method="post" action="/login-usuario">
         <h3>Entrar como Usuário</h3>
+        <label>Nome Completo</label> <br>
+        <input type="text" id="name" name="name">  <br>
         <label>Email</label> <br>
         <input type="email" id="email" name="email">  <br>
         <label>Senha</label><br>
         <input type="password" id="senha" name="senha"> <br>
-        <button>Entrar</button>
+      <button>Entrar</button>
     </form>
     </div>
 </section>

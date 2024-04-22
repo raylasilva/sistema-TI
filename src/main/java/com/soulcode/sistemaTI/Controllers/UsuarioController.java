@@ -1,8 +1,27 @@
 package com.soulcode.sistemaTI.Controllers;
 
+import com.soulcode.sistemaTI.Models.ChamadosModel;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import java.util.ArrayList;
+import java.util.List;
 
-@RestController
+@Controller
 public class UsuarioController {
+
+    private List<ChamadosModel> chamados = new ArrayList<>();
+    private String nomeCompletoUsuario;
+
+    @GetMapping("/login-usuario")
+    public String loginUsuario() {
+        return "login-usuario";
+    }
+
+    @PostMapping("/login-usuario")
+    public String loginUsuario(String name, Model model) {
+        model.addAttribute("name", name);
+        return "redirect:/chamados-sistema?name=" + nomeCompletoUsuario;
+    }
 }
