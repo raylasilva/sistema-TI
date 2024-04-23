@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamados Tecnico</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/style-chamados.css"/>
+</head>
+<body>
+
+<header class="cabecalho">
+    <div class="logo">
+        <img src="images/logo.jpeg" alt="logo ElasTech2024" />
+    </div>
+    <div class="titulo">
+        <h1>Suporte ElasTech</h1>
+    </div>
+    <nav class="cabecalhoMenu">
+        <a href="index.html">Voltar</a>
+    </nav>
+</header>
+<div class="texto">
+    <h1> Chamados abertos <span th:text="${name}"></span></h1>
+</div>
+
+<section class="home">
+    <div class="container">
+        <table>
+            <thead class="titulo-tabela">
+            <tr>
+                <th>Usuário</th>
+                <th>Setor</th>
+                <th>Prioridade</th>
+                <th>Data de Início</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="chamado : ${chamados}">
+                <td th:text="${chamado.nome}">Usuário</td>
+                <td th:text="${chamado.setor}">Setor</td>
+                <td th:text="${chamado.prioridade}">Prioridade</td>
+                <td th:text="${chamado.dataInicio}">Data de Início</td>
+               <td>
+                   <SELECT>
+
+                    <OPTION Value="em-analise">Em análise</OPTION>
+                    <OPTION Value="aguardando">Aguardando técnico</OPTION>
+                    <OPTION Value="em-atendimento">Em atendimento</OPTION>
+                    <OPTION Value="outro-setor">Escalado para outro setor</OPTION>
+                    <OPTION Value="finalizado">Finalizado</OPTION>
+
+                </SELECT>
+               </td>
+
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+                    <footer class="footer">
+                        <div class="container">
+                            <div class="footer-content">
+                                <div class="github">
+                                    <img src="images/github.png" alt="GitHub Logo" class="github-img" />
+                                </div>
+                                <div class="github-links">
+                                    <a href="https://github.com/BiancalBarreto">Bianca Barreto</a>
+                                    <a href="https://github.com/ElisIrons">Elis Rodrigues</a>
+                                    <a href="https://github.com/ericajv">Érica Viera</a>
+                                    <a href="https://github.com/manuscruz">Emanuelle Cruz</a>
+                                    <a href="https://github.com/iingrud">Ingrid </a>
+                                    <a href="https://github.com/raylasilva">Rayla Sila</a>
+                                    <a href="https://github.com/SanaOliver">Rosana Oliveira</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+                    </body>
+                    </html>

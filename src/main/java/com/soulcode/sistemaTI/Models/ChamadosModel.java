@@ -1,9 +1,6 @@
 package com.soulcode.sistemaTI.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -13,12 +10,16 @@ public class ChamadosModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idtecnico;
-
+    @Column
     private String nome;
+    @Column
     private String setor;
+    @Column
     private String descricao;
+    @Column
 
     private String prioridade;
+    @Column
     private LocalDate dataInicio;
 
     public ChamadosModel() {
