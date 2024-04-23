@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,8 +22,9 @@ public class UsuarioController {
     }
 
     @PostMapping("/login-usuario")
-    public String loginUsuario(String name, Model model) {
+    public String loginUsuario(@RequestParam String name, Model model) {
         model.addAttribute("name", name);
+        nomeCompletoUsuario = name;
         return "redirect:/chamados-sistema?name=" + nomeCompletoUsuario;
     }
 }

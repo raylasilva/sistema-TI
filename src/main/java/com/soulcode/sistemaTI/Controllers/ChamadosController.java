@@ -3,8 +3,8 @@ package com.soulcode.sistemaTI.Controllers;
 import com.soulcode.sistemaTI.Models.ChamadosModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,15 +21,15 @@ public class ChamadosController {
         return "chamados-usuario";
     }
 
-    @GetMapping("/criar-chamado")
-    public String criarChamado(Model model) {
-        model.addAttribute("usuario", "");
+//    @GetMapping("/criar-chamado")
+    @RequestMapping(value = "/criar-chamado", method = RequestMethod.GET)
+    public String criarChamado( ) {
         return "novo-chamado";
     }
 
-    @PostMapping("/criar-chamado")
-    public String criarNovoChamado(ChamadosModel chamado) {
-        chamados.add(chamado);
-        return "redirect:/chamados-usuario?name=" + chamado.getUsuario();
-    }
+//    @PostMapping("/criar-chamado")
+//    public String criarNovoChamado(ChamadosModel chamado) {
+//        chamados.add(chamado);
+//        return "redirect:/chamados-usuario?name=" + chamado.getUsuario();
+//    }
 }

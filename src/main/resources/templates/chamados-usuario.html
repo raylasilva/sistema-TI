@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamados</title>
+    <title>Chamados Usuário</title>
     <link rel="stylesheet" type="text/css" href="/Styles/style-chamados.css"/>
 </head>
 <body>
+
 <header class="cabecalho">
     <div class="logo">
         <img src="images/logo.jpeg" alt="logo ElasTech2024" />
@@ -15,13 +16,14 @@
         <h1>Suporte ElasTech</h1>
     </div>
     <nav class="cabecalhoMenu">
-        <a href="novo-chamado">Novo chamado</a>
+        <a href="/criar-chamado" >Novo chamado</a>
         <a href="index.html">Voltar</a>
     </nav>
 </header>
 <div class="texto">
     <h1> Chamados de <span th:text="${name}"></span></h1>
 </div>
+
 <section class="home">
     <div class="container">
         <table>
@@ -36,7 +38,7 @@
             </thead>
             <tbody>
             <tr th:each="chamado : ${chamados}">
-                <td th:text="${chamado.usuario}">Usuário</td>
+                <td th:text="${chamado.nome}">Usuário</td>
                 <td th:text="${chamado.setor}">Setor</td>
                 <td th:text="${chamado.descricao}">Descrição</td>
                 <td th:text="${chamado.prioridade}">Prioridade</td>
@@ -66,5 +68,6 @@
         </div>
     </div>
 </footer>
+-->
 </body>
 </html>

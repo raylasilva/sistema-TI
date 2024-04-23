@@ -1,16 +1,17 @@
 package com.soulcode.sistemaTI.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class UsuarioModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idusuario;
+    @Column
     private String nome;
+    @Column
     private String email;
+    @Column
     private String senha;
 
     public UsuarioModel() {

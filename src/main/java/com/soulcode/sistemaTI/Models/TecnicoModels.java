@@ -3,13 +3,14 @@ package com.soulcode.sistemaTI.Models;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-public class ChamadosModel {
+public class TecnicoModels  {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idtecnico;
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private long id_tecnico;
     @Column
     private String nome;
     @Column
@@ -21,24 +22,30 @@ public class ChamadosModel {
     private String prioridade;
     @Column
     private LocalDate dataInicio;
+    @Column
+    private String obsevacao;
+    @Column
+    private String status;
 
-    public ChamadosModel() {
+    public TecnicoModels() {
     }
 
-    public ChamadosModel(String nome, String setor, String descricao, String prioridade, LocalDate dataInicio) {
+    public TecnicoModels(String nome, String setor, String descricao, String prioridade, LocalDate dataInicio, String obsevacao,String status) {
+        this.nome = nome;
         this.setor = setor;
         this.descricao = descricao;
         this.prioridade = prioridade;
         this.dataInicio = dataInicio;
-        this.nome = nome;
+        this.obsevacao = obsevacao;
+        this.status = status;
     }
 
-    public long getIdtecnico() {
-        return idtecnico;
+    public long getId_tecnico() {
+        return id_tecnico;
     }
 
-    public void setIdtecnico(long idtecnico) {
-        this.idtecnico = idtecnico;
+    public void setId_tecnico(long id_tecnico) {
+        this.id_tecnico = id_tecnico;
     }
 
     public String getNome() {
@@ -47,14 +54,6 @@ public class ChamadosModel {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public long getIdTecnico() {
-        return idtecnico;
-    }
-
-    public void setIdTecnico(long idtecnico) {
-        this.idtecnico = idtecnico;
     }
 
     public String getSetor() {
@@ -87,5 +86,21 @@ public class ChamadosModel {
 
     public void setDataInicio(LocalDate dataInicio) {
         this.dataInicio = dataInicio;
+    }
+
+    public String getObsevacao() {
+        return obsevacao;
+    }
+
+    public void setObsevacao(String obsevacao) {
+        this.obsevacao = obsevacao;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

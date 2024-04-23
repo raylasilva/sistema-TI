@@ -1,9 +1,12 @@
 package com.soulcode.sistemaTI;
 
 import com.soulcode.sistemaTI.Models.ChamadosModel;
+import com.soulcode.sistemaTI.Models.TecnicoModels;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
@@ -13,8 +16,8 @@ import java.util.List;
 @Controller
 public class SistemaController {
 
-    @GetMapping("/chamados-sistema")
-    public String listaChamados(Model model, String name){
+    @RequestMapping(value = "/chamados-sistema", method = RequestMethod.GET)
+    public String listaChamados(Model model, @RequestParam String name){
         List<ChamadosModel> chamados = new ArrayList<>();
 
         // Simulando alguns chamados
@@ -33,5 +36,11 @@ public class SistemaController {
         model.addAttribute("chamados", chamados);
         model.addAttribute("name", name);
         return "chamados-usuario";
+    }
+    @RequestMapping(value = "/historicochamado", method = RequestMethod.GET)
+    public String historicoChamado(Model model, @RequestParam String name){
+        List<ChamadosModel> historico = new ArrayList<>();
+        TecnicoModels historico1 = new TecnicoModels("erica", "adm","xzljbfjsdibnfsvjkix","baixa", LocalDate.of(2024,5,13),"obs", "em andamento");
+       return "chamados-tecnicos";
     }
 }
