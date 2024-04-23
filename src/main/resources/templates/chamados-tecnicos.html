@@ -42,17 +42,15 @@
                 <td th:text="${chamado.prioridade}">Prioridade</td>
                 <td th:text="${chamado.dataInicio}">Data de Início</td>
                <td>
-                   <SELECT>
-
-                    <OPTION Value="em-analise">Em análise</OPTION>
-                    <OPTION Value="aguardando">Aguardando técnico</OPTION>
-                    <OPTION Value="em-atendimento">Em atendimento</OPTION>
-                    <OPTION Value="outro-setor">Escalado para outro setor</OPTION>
-                    <OPTION Value="finalizado">Finalizado</OPTION>
-
-                </SELECT>
+                <label for="status">Status:</label><br>
+                <select id="status" name="status" required>
+                    <option value="em-analise">Em análise</option>
+                    <option value="aguardando">Aguardando técnico</option>
+                    <option value="em-atendimento">Em atendimento</option>
+                    <option value="outro-setor">Escalado para outro setor</option>
+                    <option value="finalizado">Finalizador</option>
+                </select>
                </td>
-
             </tr>
             </tbody>
         </table>
