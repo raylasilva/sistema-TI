@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamados</title>
-    <link rel="stylesheet" type="text/css" href="/Styles/style-chamados.css"/>
+    <link rel="stylesheet" type="text/css" href="/Styles/style-novo-chamado.css"/>
 </head>
 <body>
 <header class="cabecalho">
@@ -15,15 +15,16 @@
         <h1>Suporte ElasTech</h1>
     </div>
     <nav class="cabecalhoMenu">
-        <a href="login-tecnico">Entrar como Usuário</a>
-        <a href="login-usuario">Entrar como Técnico</a>
+        <a href="/criar-chamado">Novo chamado</a>
+        <a href="/chamados-usuario">Voltar</a>
     </nav>
 </header>
-
+<div class="texto">
+    <h1> Criar novo chamado: </h1>
+</div>
 <section class="home">
     <div class="container">
-        <h1>Criar Novo Chamado</h1>
-        <form method="get" action="/criar-chamado">
+        <form class="form" method="post" action="/criar-chamado">
             <label for="usuario">Usuário:</label><br>
             <input type="text" id="usuario" name="usuario" required><br>
             <label for="setor">Setor:</label><br>

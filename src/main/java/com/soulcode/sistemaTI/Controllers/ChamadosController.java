@@ -21,15 +21,16 @@ public class ChamadosController {
         return "chamados-usuario";
     }
 
-//    @GetMapping("/criar-chamado")
     @RequestMapping(value = "/criar-chamado", method = RequestMethod.GET)
-    public String criarChamado( ) {
+    public String criarChamado(Model model, String name ) {
+        model.addAttribute("name", name);
+        model.addAttribute("chamado", chamados);
         return "novo-chamado";
     }
 
-//    @PostMapping("/criar-chamado")
-//    public String criarNovoChamado(ChamadosModel chamado) {
-//        chamados.add(chamado);
-//        return "redirect:/chamados-usuario?name=" + chamado.getUsuario();
-//    }
+  @PostMapping("/criar-chamado")
+ public String criarNovoChamado(ChamadosModel chamado) {
+   chamados.add(chamado);
+        return "redirect:/chamados-usuario?name=" + chamado.getNome();
+  }
 }
