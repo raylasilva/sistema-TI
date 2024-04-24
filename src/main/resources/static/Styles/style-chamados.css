@@ -54,8 +54,8 @@ background-color: #FFFFE0;
 }
 
 .container {
-  width: 600px;
-  margin: 15px auto 50px auto;
+  width: 900px;
+  margin: 20px auto 50px auto;
 }
 
 .texto {
@@ -70,6 +70,7 @@ background-color: #FFFFE0;
 table {
 	border-collapse: collapse;
 	border: 1px solid #000;
+	margin-top:50px;
 	margin-bottom: 18px;
 	width:100%
 }

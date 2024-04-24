@@ -12,27 +12,20 @@ import java.util.List;
 @Controller
 public class TecnicoController {
 
-
     private String nomeCompletoTecnico;
-    @GetMapping("/login-tecnico")
+
+    @RequestMapping(value = "/login-tecnico", method = RequestMethod.GET)
     public String loginTecnico() {
         return "login-tecnico";
     }
-//    @RequestMapping(value = "/historicotecnico",method = RequestMethod.POST)
-//    public String loginTecnico(@RequestParam String name, Model model) {
-//        model.addAttribute("name", name);
-//        return "chamados-tecnicos";
-//    }
-    @PostMapping("/login-tecnico")
+
+
+    @RequestMapping(value = "/login-tecnico", method = RequestMethod.POST)
     public String loginUsuario(@RequestParam String name, Model model) {
         model.addAttribute("name", name);
         nomeCompletoTecnico = name;
         return "redirect:/historicochamado?name=" + nomeCompletoTecnico;
     }
-
-
-
-
 }
 
 
