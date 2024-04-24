@@ -16,11 +16,11 @@
         <h1>Suporte ElasTech</h1>
     </div>
     <nav class="cabecalhoMenu">
-        <a href="index.html">Voltar</a>
+        <a href="index.html">Sair</a>
     </nav>
 </header>
 <div class="texto">
-    <h1> Chamados abertos <span th:text="${name}"></span></h1>
+    <h1> Chamados disponiveis de <span th:text="${name}"></span></h1>
 </div>
 
 <section class="home">
@@ -30,27 +30,30 @@
             <tr>
                 <th>Usuário</th>
                 <th>Setor</th>
+                <th>Descrição</th>
                 <th>Prioridade</th>
                 <th>Data de Início</th>
                 <th>Status</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="chamado : ${chamados}">
-                <td th:text="${chamado.nome}">Usuário</td>
-                <td th:text="${chamado.setor}">Setor</td>
-                <td th:text="${chamado.prioridade}">Prioridade</td>
-                <td th:text="${chamado.dataInicio}">Data de Início</td>
-               <td>
-                <label for="status">Status:</label><br>
-                <select id="status" name="status" required>
-                    <option value="em-analise">Em análise</option>
-                    <option value="aguardando">Aguardando técnico</option>
-                    <option value="em-atendimento">Em atendimento</option>
-                    <option value="outro-setor">Escalado para outro setor</option>
-                    <option value="finalizado">Finalizador</option>
-                </select>
-               </td>
+            <tr th:each="historico : ${historico}">
+                <td th:text="${historico.nome}">Usuário</td>
+                <td th:text="${historico.setor}">Setor</td>
+                <td th:text="${historico.descricao}">Descrição</td>
+                <td th:text="${historico.prioridade}">Prioridade</td>
+                <td th:text="${historico.dataInicio}">Data de Início</td>
+
+                <td>
+                    <label for="status">Status:</label><br>
+                    <select id="status" name="status" required>
+                        <option value="em-analise">Em análise</option>
+                        <option value="aguardando">Aguardando técnico</option>
+                        <option value="em-atendimento">Em atendimento</option>
+                        <option value="outro-setor">Escalado para outro setor</option>
+                        <option value="finalizado">Finalizador</option>
+                    </select>
+                </td>
             </tr>
             </tbody>
         </table>
@@ -70,7 +73,7 @@
                                     <a href="https://github.com/ericajv">Érica Viera</a>
                                     <a href="https://github.com/manuscruz">Emanuelle Cruz</a>
                                     <a href="https://github.com/iingrud">Ingrid </a>
-                                    <a href="https://github.com/raylasilva">Rayla Sila</a>
+                                    <a href="https://github.com/raylasilva">Rayla Silva</a>
                                     <a href="https://github.com/SanaOliver">Rosana Oliveira</a>
                                 </div>
                             </div>

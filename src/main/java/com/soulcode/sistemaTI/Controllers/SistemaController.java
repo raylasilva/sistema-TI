@@ -1,4 +1,4 @@
-package com.soulcode.sistemaTI;
+package com.soulcode.sistemaTI.Controllers;
 
 import com.soulcode.sistemaTI.Models.ChamadosModel;
 import com.soulcode.sistemaTI.Models.TecnicoModels;
@@ -39,8 +39,18 @@ public class SistemaController {
     }
     @RequestMapping(value = "/historicochamado", method = RequestMethod.GET)
     public String historicoChamado(Model model, @RequestParam String name){
-        List<ChamadosModel> historico = new ArrayList<>();
-        TecnicoModels historico1 = new TecnicoModels("erica", "adm","xzljbfjsdibnfsvjkix","baixa", LocalDate.of(2024,5,13),"obs", "em andamento");
-       return "chamados-tecnicos";
+        List<TecnicoModels> historico = new ArrayList<>();
+        TecnicoModels historico1 = new TecnicoModels("Erica", "adm","Criar acesso","baixa", LocalDate.of(2024,5,13),"obs", "em andamento");
+        TecnicoModels historico2 = new TecnicoModels("Joao", "fiscal","Sistema caiu","media", LocalDate.of(2024,5,23),"obs", "em andamento");
+        TecnicoModels historico3 = new TecnicoModels("Carlos", "adm","Preciso de teclado","baixa", LocalDate.of(2024,3,1),"obs", "em andamento");
+        TecnicoModels historico4 = new TecnicoModels("Leticia", "controladoria","problema com senha do email","alta", LocalDate.of(2024,4,13),"obs", "em andamento");
+        historico.add(historico1);
+        historico.add(historico2);
+        historico.add(historico3);
+        historico.add(historico4);
+
+        model.addAttribute("historico", historico);
+        model.addAttribute("name", name);
+        return "chamados-tecnicos";
     }
 }
