@@ -20,7 +20,6 @@ public class SistemaController {
     public String listaChamados(Model model, @RequestParam String name){
         List<ChamadosModel> chamados = new ArrayList<>();
 
-        // Simulando alguns chamados
         ChamadosModel chamado1 = new ChamadosModel(name, "Administrativo", "Problema com o e-mail", "Alta", LocalDate.of(2023, 2, 17));
         ChamadosModel chamado2 = new ChamadosModel(name, "Administrativo", "Problema no computador", "Média", LocalDate.of(2024, 5, 18));
         ChamadosModel chamado3 = new ChamadosModel(name, "Administrativo", "Erro no software office", "Baixa", LocalDate.of(2024, 3, 28));
@@ -44,6 +43,7 @@ public class SistemaController {
         TecnicoModels historico2 = new TecnicoModels("Joao", "fiscal","Sistema caiu","media", LocalDate.of(2024,5,23),"obs", "em andamento");
         TecnicoModels historico3 = new TecnicoModels("Carlos", "adm","Preciso de teclado","baixa", LocalDate.of(2024,3,1),"obs", "em andamento");
         TecnicoModels historico4 = new TecnicoModels("Leticia", "controladoria","problema com senha do email","alta", LocalDate.of(2024,4,13),"obs", "em andamento");
+
         historico.add(historico1);
         historico.add(historico2);
         historico.add(historico3);

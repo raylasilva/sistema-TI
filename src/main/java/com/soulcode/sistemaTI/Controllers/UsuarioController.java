@@ -15,7 +15,6 @@ import java.util.List;
 public class UsuarioController {
 
     private List<ChamadosModel> chamados = new ArrayList<>();
-    private String nomeCompletoUsuario;
 
     @GetMapping("/login-usuario")
     public String loginUsuario() {
@@ -25,7 +24,7 @@ public class UsuarioController {
     @PostMapping("/login-usuario")
     public String loginUsuario(@RequestParam String name, Model model) {
         model.addAttribute("name", name);
-        nomeCompletoUsuario = name;
-        return "redirect:/chamados-sistema?name=" + nomeCompletoUsuario;
+
+        return "redirect:/chamados-sistema?name=" + name;
     }
 }

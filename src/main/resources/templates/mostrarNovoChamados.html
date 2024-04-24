@@ -21,13 +21,12 @@
     </nav>
 </header>
 <div class="texto">
-    <h1>Novo chamado de <span th:text="${name}"></span></h1>
+    <h1>Chamado de <span th:text="${name}"></span> criado com sucesso!</h1>
 </div>
 
 <section class="home">
     <div class="container">
-        <h1>Chamado Criado com Sucesso</h1>
-        <p>Detalhes do Chamado:</p>
+
         <table>
             <thead class="titulo-tabela">
 
@@ -36,6 +35,8 @@
                     <th>Setor</th>
                     <th>Descrição</th>
                     <th>Prioridade</th>
+                    <th>Data de Início</th>
+
 
                 </tr>
                 </thead>
@@ -44,6 +45,7 @@
                 <td> <p><span th:text="${chamado.setor}"></span></p></td>
                 <td> <p> <span th:text="${chamado.descricao}"></span></p></td>
                 <td> <p><span th:text="${chamado.prioridade}"></span></p></td>
+                <td> <p><span th:text="${chamado.dataInicio}"></span></p></td>
             </tr>
 
         </table>

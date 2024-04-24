@@ -26,18 +26,13 @@ public class ChamadosModel {
     }
 
     public ChamadosModel(String nome, String setor, String descricao, String prioridade, LocalDate dataInicio) {
+        this.nome = nome;
         this.setor = setor;
         this.descricao = descricao;
         this.prioridade = prioridade;
         this.dataInicio = dataInicio;
-        this.nome = nome;
     }
-    public  ChamadosModel(String nome, String setor, String descricao, String prioridade){
-        this.nome = nome;
-        this.setor = setor;
-        this.descricao = descricao;
-        this.prioridade = prioridade;
-    }
+
     public long getIdusuario() {
         return idusuario;
     }
