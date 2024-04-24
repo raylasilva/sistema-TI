@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamados</title>
-    <link rel="stylesheet" type="text/css" href="/Styles/style-novo-chamado.css"/>
+    <title>Chamados Usuário</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/style-chamados.css"/>
 </head>
 <body>
+
 <header class="cabecalho">
     <div class="logo">
         <img src="images/logo.jpeg" alt="logo ElasTech2024" />
@@ -15,30 +16,23 @@
         <h1>Suporte ElasTech</h1>
     </div>
     <nav class="cabecalhoMenu">
-        <a href="/criar-chamado">Novo chamado</a>
-        <a href="/chamados-usuario">Voltar</a>
+        <a href="/criar-chamado" >Novo chamado</a>
+        <a href="index.html">Voltar</a>
     </nav>
 </header>
 <div class="texto">
-    <h1> Criar novo chamado: </h1>
+    <h1> Chamados de <span th:text="${name}"></span></h1>
 </div>
+
 <section class="home">
     <div class="container">
-        <form class="form"  action="/mostrar-chamado" method="get">
-            <label for="nome">Usuário:</label><br>
-            <input type="text" id="nome" name="nome" required><br>
-            <label for="setor">Setor:</label><br>
-            <input type="text" id="setor" name="setor" required><br>
-            <label for="descricao">Descrição:</label><br>
-            <textarea id="descricao" name="descricao" required></textarea><br>
-            <label for="prioridade">Prioridade:</label><br>
-            <select id="prioridade" name="prioridade" required>
-                <option value="Baixa">Baixa</option>
-                <option value="Média">Média</option>
-                <option value="Alta">Alta</option>
-            </select><br>
-            <button type="submit">Criar Chamado</button>
-        </form>
+        <h1>Chamado Criado com Sucesso</h1>
+        <p>Detalhes do Chamado:</p>
+        <p><strong>Nome:</strong> <span th:text="${chamado.nome}"></span></p>
+        <p><strong>Setor:</strong> <span th:text="${chamado.setor}"></span></p>
+        <p><strong>Descrição:</strong> <span th:text="${chamado.descricao}"></span></p>
+        <p><strong>Prioridade:</strong> <span th:text="${chamado.prioridade}"></span></p>
+
     </div>
 </section>
 

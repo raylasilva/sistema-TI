@@ -32,7 +32,12 @@ public class ChamadosModel {
         this.dataInicio = dataInicio;
         this.nome = nome;
     }
-
+    public  ChamadosModel(String nome, String setor, String descricao, String prioridade){
+        this.nome = nome;
+        this.setor = setor;
+        this.descricao = descricao;
+        this.prioridade = prioridade;
+    }
     public long getIdtecnico() {
         return idtecnico;
     }
