@@ -11,18 +11,15 @@ import java.util.List;
 @Controller
 public class ChamadosController {
 
-    private List<ChamadosModel> chamados = new ArrayList<>();
 
-
-
+    //pagina pra criar um novo chamado e mandar pra pagina 'mostrar-chamado'
     @RequestMapping(value = "/criar-chamado", method = RequestMethod.GET)
     public String criarChamado(Model model, String name ) {
         model.addAttribute("name", name);
-        model.addAttribute("chamado", chamados);
         return "novo-chamado";
     }
 
-    //Pega o campo chamado do html e adiciona os objetos criados no input
+    //Pega o campo 'chamado' do html e mostra os objetos criados no input na pagina "mostrar-chamado"
     @RequestMapping(value = "/mostrar-chamado", method = RequestMethod.GET)
  public String criarNovoChamado(Model model, @RequestParam String nome,String setor,String descricao, String prioridade) {
         model.addAttribute("name", nome);
