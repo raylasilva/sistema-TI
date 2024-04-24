@@ -27,10 +27,17 @@ public class ChamadosController {
         model.addAttribute("chamado", chamados);
         return "novo-chamado";
     }
+    @RequestMapping(value = "/mostrar-chamado", method = RequestMethod.GET)
+ public String criarNovoChamado(ChamadosModel chamado, Model model, @RequestParam String nome,String setor,String descricao, String prioridade) {
+        model.addAttribute("name", nome);
+      ChamadosModel novoChamado = new ChamadosModel(nome, setor, descricao, prioridade);
+        model.addAttribute("chamado", novoChamado);
+        chamados.add(chamado);
 
-  @PostMapping("/criar-chamado")
- public String criarNovoChamado(ChamadosModel chamado) {
-   chamados.add(chamado);
-        return "redirect:/chamados-usuario?name=" + chamado.getNome();
+            // Adicionar o objeto ao modelo para ser exibido na página de confirmação
+
+        return "novoChamados" ;
   }
+
+
 }
