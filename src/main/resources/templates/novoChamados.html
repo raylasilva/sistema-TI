@@ -28,11 +28,25 @@
     <div class="container">
         <h1>Chamado Criado com Sucesso</h1>
         <p>Detalhes do Chamado:</p>
-        <p><strong>Nome:</strong> <span th:text="${chamado.nome}"></span></p>
-        <p><strong>Setor:</strong> <span th:text="${chamado.setor}"></span></p>
-        <p><strong>Descrição:</strong> <span th:text="${chamado.descricao}"></span></p>
-        <p><strong>Prioridade:</strong> <span th:text="${chamado.prioridade}"></span></p>
+        <table>
+            <thead class="titulo-tabela">
 
+                <tr>
+                    <th>Usuário</th>
+                    <th>Setor</th>
+                    <th>Descrição</th>
+                    <th>Prioridade</th>
+
+                </tr>
+                </thead>
+            <tr>
+       <td> <p> <span th:text="${chamado.nome}"></span></p></td>
+                <td> <p><span th:text="${chamado.setor}"></span></p></td>
+                <td> <p> <span th:text="${chamado.descricao}"></span></p></td>
+                <td> <p><span th:text="${chamado.prioridade}"></span></p></td>
+            </tr>
+
+        </table>
     </div>
 </section>
 

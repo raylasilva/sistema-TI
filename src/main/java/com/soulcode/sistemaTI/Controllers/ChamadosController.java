@@ -30,7 +30,7 @@ public class ChamadosController {
     @RequestMapping(value = "/mostrar-chamado", method = RequestMethod.GET)
  public String criarNovoChamado(ChamadosModel chamado, Model model, @RequestParam String nome,String setor,String descricao, String prioridade) {
         model.addAttribute("name", nome);
-        ChamadosModel novoChamado = new ChamadosModel(nome, setor, descricao, prioridade);
+      ChamadosModel novoChamado = new ChamadosModel(nome, setor, descricao, prioridade);
         model.addAttribute("chamado", novoChamado);
         chamados.add(chamado);
 
