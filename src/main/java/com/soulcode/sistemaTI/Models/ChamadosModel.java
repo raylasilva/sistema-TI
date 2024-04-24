@@ -9,7 +9,7 @@ import java.util.Date;
 public class ChamadosModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idtecnico;
+    private long idusuario;
     @Column
     private String nome;
     @Column
@@ -38,12 +38,12 @@ public class ChamadosModel {
         this.descricao = descricao;
         this.prioridade = prioridade;
     }
-    public long getIdtecnico() {
-        return idtecnico;
+    public long getIdusuario() {
+        return idusuario;
     }
 
-    public void setIdtecnico(long idtecnico) {
-        this.idtecnico = idtecnico;
+    public void setIdusuario(long idusuario) {
+        this.idusuario = idusuario;
     }
 
     public String getNome() {
@@ -52,14 +52,6 @@ public class ChamadosModel {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public long getIdTecnico() {
-        return idtecnico;
-    }
-
-    public void setIdTecnico(long idtecnico) {
-        this.idtecnico = idtecnico;
     }
 
     public String getSetor() {

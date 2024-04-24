@@ -11,32 +11,23 @@ import java.util.List;
 @Controller
 public class ChamadosController {
 
-    private List<ChamadosModel> chamados = new ArrayList<>();
-    private String nomeCompletoUsuario;
 
-    @GetMapping("/chamados-usuario")
-    public String listaChamadosUsuario(Model model, String name) {
-        model.addAttribute("chamados", chamados);
-        model.addAttribute("name", name);
-        return "chamados-usuario";
-    }
-
+    //pagina pra criar um novo chamado e mandar pra pagina 'mostrar-chamado'
     @RequestMapping(value = "/criar-chamado", method = RequestMethod.GET)
     public String criarChamado(Model model, String name ) {
         model.addAttribute("name", name);
-        model.addAttribute("chamado", chamados);
         return "novo-chamado";
     }
+
+    //Pega o campo 'chamado' do html e mostra os objetos criados no input na pagina "mostrar-chamado"
     @RequestMapping(value = "/mostrar-chamado", method = RequestMethod.GET)
- public String criarNovoChamado(ChamadosModel chamado, Model model, @RequestParam String nome,String setor,String descricao, String prioridade) {
+ public String criarNovoChamado(Model model, @RequestParam String nome,String setor,String descricao, String prioridade) {
         model.addAttribute("name", nome);
       ChamadosModel novoChamado = new ChamadosModel(nome, setor, descricao, prioridade);
         model.addAttribute("chamado", novoChamado);
-        chamados.add(chamado);
 
-            // Adicionar o objeto ao modelo para ser exibido na página de confirmação
 
-        return "novoChamados" ;
+        return "mostrarNovoChamados" ;
   }
 
 
