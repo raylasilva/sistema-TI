@@ -5,31 +5,31 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class ChamadosController {
 
-    private List<ChamadosModel> chamados = new ArrayList<>();
-    private String nomeCompletoUsuario;
 
-    @GetMapping("/chamados-usuario")
-    public String listaChamadosUsuario(Model model, String name) {
-        model.addAttribute("chamados", chamados);
-        model.addAttribute("name", name);
-        return "chamados-usuario";
-    }
-
-//    @GetMapping("/criar-chamado")
+    //pagina pra criar um novo chamado e mandar pra pagina 'mostrar-chamado'
     @RequestMapping(value = "/criar-chamado", method = RequestMethod.GET)
-    public String criarChamado( ) {
+    public String criarChamado(Model model, String name) {
+        model.addAttribute("name", name);
         return "novo-chamado";
     }
 
-//    @PostMapping("/criar-chamado")
-//    public String criarNovoChamado(ChamadosModel chamado) {
-//        chamados.add(chamado);
-//        return "redirect:/chamados-usuario?name=" + chamado.getUsuario();
-//    }
+    //Pega o campo 'chamado' do html e mostra os objetos criados no input na pagina "mostrar-chamado"
+    @RequestMapping(value = "/mostrar-chamado", method = RequestMethod.GET)
+    public String criarNovoChamado(Model model, @RequestParam String nome, String setor, String descricao, String prioridade, LocalDate dataInicio) {
+        model.addAttribute("name", nome);
+        ChamadosModel novoChamado = new ChamadosModel(nome, setor, descricao, prioridade, dataInicio);
+        model.addAttribute("chamado", novoChamado);
+
+
+        return "mostrarNovoChamados";
+    }
+
+
 }

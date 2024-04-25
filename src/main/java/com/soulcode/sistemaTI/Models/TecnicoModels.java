@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class TecnicoModels  {
+public class TecnicoModels {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long id_tecnico;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idTecnico;
     @Column
     private String nome;
     @Column
@@ -30,7 +30,7 @@ public class TecnicoModels  {
     public TecnicoModels() {
     }
 
-    public TecnicoModels(String nome, String setor, String descricao, String prioridade, LocalDate dataInicio, String obsevacao,String status) {
+    public TecnicoModels(String nome, String setor, String descricao, String prioridade, LocalDate dataInicio, String obsevacao, String status) {
         this.nome = nome;
         this.setor = setor;
         this.descricao = descricao;
@@ -40,12 +40,12 @@ public class TecnicoModels  {
         this.status = status;
     }
 
-    public long getId_tecnico() {
-        return id_tecnico;
+    public long getIdTecnico() {
+        return idTecnico;
     }
 
-    public void setId_tecnico(long id_tecnico) {
-        this.id_tecnico = id_tecnico;
+    public void setIdTecnico(long idTecnico) {
+        this.idTecnico = idTecnico;
     }
 
     public String getNome() {
